@@ -9,6 +9,3 @@
 - Implement collision detection and scoring system.
 
 ![console-falling-rocks](https://cloud.githubusercontent.com/assets/3106986/5611219/7126b0b6-94cc-11e4-8610-28ffa78d0cf7.png)
-
-## Submission
-- You do not have to submit anything for this problem
