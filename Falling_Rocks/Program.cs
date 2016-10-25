@@ -45,7 +45,7 @@ namespace Falling_Rocks
 
                     listOfRocks.Add(new Rock(randColumn, 0, rockSymbols[randomRockSymbol]));
                 }
-
+                //hkjhkjhkh
                 Console.Clear();
 
                 for (int i = 0; i < listOfRocks.Count; i++)

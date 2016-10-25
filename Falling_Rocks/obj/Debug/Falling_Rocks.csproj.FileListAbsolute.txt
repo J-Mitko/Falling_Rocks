@@ -4,3 +4,9 @@ D:\My Documents\GitHub\Falling_Rocks\Falling_Rocks\obj\Debug\Falling_Rocks.pdb
 D:\My Documents\GitHub\Falling_Rocks\Falling_Rocks\bin\Debug\Falling_Rocks.exe
 D:\My Documents\GitHub\Falling_Rocks\Falling_Rocks\bin\Debug\Falling_Rocks.pdb
 D:\My Documents\GitHub\Falling_Rocks\Falling_Rocks\obj\Debug\Falling_Rocks.csprojResolveAssemblyReference.cache
+C:\Users\J-Mitko\Source\Repos\Falling_Rocks\Falling_Rocks\bin\Debug\Falling_Rocks.exe.config
+C:\Users\J-Mitko\Source\Repos\Falling_Rocks\Falling_Rocks\obj\Debug\Falling_Rocks.exe
+C:\Users\J-Mitko\Source\Repos\Falling_Rocks\Falling_Rocks\obj\Debug\Falling_Rocks.pdb
+C:\Users\J-Mitko\Source\Repos\Falling_Rocks\Falling_Rocks\bin\Debug\Falling_Rocks.exe
+C:\Users\J-Mitko\Source\Repos\Falling_Rocks\Falling_Rocks\bin\Debug\Falling_Rocks.pdb
+C:\Users\J-Mitko\Source\Repos\Falling_Rocks\Falling_Rocks\obj\Debug\Falling_Rocks.csprojResolveAssemblyReference.cache
