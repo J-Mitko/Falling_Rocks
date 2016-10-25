@@ -24,8 +24,8 @@ namespace Falling_Rocks
         static void Main(string[] args)
         {
             Console.Title = "Falling Rocks";
-            Console.SetWindowSize(80, 50);//80 columns 50 rows 
-            Console.SetBufferSize(80, 50);
+            Console.SetWindowSize(60, 40);//80 columns 50 rows 
+            Console.SetBufferSize(60, 40);
             Console.CursorVisible = false;
 
             Random rand = new Random();
@@ -33,12 +33,10 @@ namespace Falling_Rocks
             List<Rock> listOfRocks = new List<Rock>();
             char[] rockSymbols = { '^', '@', '*', '&', '+', '%', '$', '#', '!', '.', ';', '-' };// Size = 12
 
-
-
             while (true)
             {
-                Console.Clear();
-                int randRockcount = rand.Next(2,10); //rocks on a single Row for appropriate density
+                
+                int randRockcount = rand.Next(1,3); //rocks on a single Row for appropriate density
 
                 for (int i = 0; i <= randRockcount; i++)
                 {
@@ -47,6 +45,8 @@ namespace Falling_Rocks
 
                     listOfRocks.Add(new Rock(randColumn, 0, rockSymbols[randomRockSymbol]));
                 }
+
+                Console.Clear();
 
                 for (int i = 0; i < listOfRocks.Count; i++)
                 {
@@ -65,8 +65,7 @@ namespace Falling_Rocks
                     Console.SetCursorPosition(currentRock.column, currentRock.row);
                     Console.Write(currentRock.type);
                 }
-                Thread.Sleep(150);
-
+                Thread.Sleep(300);
             }
         }
     }
