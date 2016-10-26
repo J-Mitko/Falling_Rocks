@@ -35,8 +35,8 @@ namespace Falling_Rocks
         static void Main(string[] args)
         {
             Console.Title = "Falling Rocks";
-            Console.SetWindowSize(30, 15);//60 columns 40 rows 
-            Console.SetBufferSize(30, 15);
+            Console.SetWindowSize(30, 20);//30 columns 15 rows 
+            Console.SetBufferSize(30, 20);
             Console.CursorVisible = false;
 
             bool gameLoop = true;
@@ -84,7 +84,7 @@ namespace Falling_Rocks
                 for (int i = 0; i < listOfRocks.Count; i++)
                 {
                     Rock currentRock = listOfRocks[i];
-                    //collision detect ( 0 )
+                    //collision detect ( 0 ) check all 3 
                     if ((dwarf.column == currentRock.column || dwarf.column + 1 == currentRock.column || dwarf.column + 2 == currentRock.column ) && dwarf.row == currentRock.row + 1)
                     {
                         Console.WriteLine("GAME OVER!");
