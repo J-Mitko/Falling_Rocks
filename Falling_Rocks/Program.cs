@@ -53,6 +53,7 @@ namespace Falling_Rocks
             Console.CursorVisible = false;
 
             bool gameLoop = true;
+            uint score = 0;
 
             Random rand = new Random();
 
@@ -101,8 +102,6 @@ namespace Falling_Rocks
                     //collision detect ( 0 ) check all 3 
                     if ((dwarf.column == currentRock.column || dwarf.column + 1 == currentRock.column || dwarf.column + 2 == currentRock.column ) && dwarf.row == currentRock.row + 1)
                     {
-                        Console.Clear();
-                        Console.WriteLine("GAME OVER!");
                         gameLoop = false;
                         break;
                     }
@@ -122,8 +121,12 @@ namespace Falling_Rocks
                     listOfRocks[i] = currentRock;
                     printRock(currentRock);
                 }
+                score++;
                 Thread.Sleep(150);
             }
+
+            Console.Clear();
+            Console.WriteLine("GAME OVER! Score: {0}",score);
         }
     }
 }
