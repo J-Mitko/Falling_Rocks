@@ -32,6 +32,19 @@ namespace Falling_Rocks
 
         }
 
+        static void printDwarf(int x, int y)// x = column y = row
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write("(0)");
+        }
+
+
+        static void printRock(Rock rock)// function for printing rocks on the console
+        {
+            Console.SetCursorPosition(rock.column, rock.row);
+            Console.Write(rock.type);
+        }
+
         static void Main(string[] args)
         {
             Console.Title = "Falling Rocks";
@@ -50,27 +63,27 @@ namespace Falling_Rocks
 
             while (gameLoop)
             {
-                //read input
+                //Read player input
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo pressedKey = Console.ReadKey();
                     if (pressedKey.Key == ConsoleKey.Q)
                     {
                         gameLoop = false;
-                        break;//Quit game
+                        break;// Quit game
                     }
                     else if (pressedKey.Key == ConsoleKey.RightArrow)
                     {
-                        dwarf.column++;
+                        dwarf.column++;// Move right
                     }
                     else if (pressedKey.Key == ConsoleKey.LeftArrow)
                     {
-                        dwarf.column--;
+                        dwarf.column--;// Move left
                     }
                 }
                 
+                //new Rocks
                 int randRockcount = rand.Next(1,2); //rocks on a single Row for appropriate density
-
                 for (int i = 0; i <= randRockcount; i++)
                 {
                     int randColumn = rand.Next(0, Console.WindowWidth);
@@ -84,9 +97,11 @@ namespace Falling_Rocks
                 for (int i = 0; i < listOfRocks.Count; i++)
                 {
                     Rock currentRock = listOfRocks[i];
+
                     //collision detect ( 0 ) check all 3 
                     if ((dwarf.column == currentRock.column || dwarf.column + 1 == currentRock.column || dwarf.column + 2 == currentRock.column ) && dwarf.row == currentRock.row + 1)
                     {
+                        Console.Clear();
                         Console.WriteLine("GAME OVER!");
                         gameLoop = false;
                         break;
@@ -96,17 +111,16 @@ namespace Falling_Rocks
                         listOfRocks.RemoveAt(i);
                         continue;
                     }
-                    //MOVE ROCK DOWN
+
+                    //Move rock down
                     currentRock.row++;
 
-                    //PRINT DWARF
-                    Console.SetCursorPosition(dwarf.column, dwarf.row);
-                    Console.Write("(0)");
+                    //Print dwarf
+                    printDwarf(dwarf.column, dwarf.row);
 
+                    //Print rock
                     listOfRocks[i] = currentRock;
-                    //PRINT ROCKS
-                    Console.SetCursorPosition(currentRock.column, currentRock.row);
-                    Console.Write(currentRock.type);
+                    printRock(currentRock);
                 }
                 Thread.Sleep(150);
             }
